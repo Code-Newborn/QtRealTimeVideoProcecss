@@ -28,6 +28,7 @@
 // Qt
 #include <QtCore/QTime>
 #include <QtCore/QThread>
+#include <QElapsedTimer>
 // OpenCV
 #include <opencv2/highgui/highgui.hpp>
 // Local
@@ -58,7 +59,7 @@ class CaptureThread : public QThread
         SharedImageBuffer *sharedImageBuffer;
         VideoCapture cap;
         Mat grabbedFrame;
-        QTime t;
+        QElapsedTimer t;
         QMutex doStopMutex;
         QQueue<int> fps;
         struct ThreadStatisticsData statsData;

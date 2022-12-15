@@ -29,6 +29,12 @@ endif()
 SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}) # 指定.exe文件输出路径为CmakeList.txt所在目录，是其他文件相对路径的参考，不可删除
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}) # 包含当前处理的 CMakeLists.txt 文件所在的路径
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/main/helper) # 包含当前处理的 ./3D 文件夹
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/main/magnification) # 包含当前处理的 ./3D 文件夹
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/main/other) # 包含当前处理的 ./3D 文件夹
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/main/threads) # 包含当前处理的 ./ui 文件夹
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/main/ui) # 包含当前处理的 ./ui 文件夹
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external/qxtSlider) # 包含当前处理的 ./ui 文件夹
 
 file(GLOB SOURCES
   ./*.cpp
